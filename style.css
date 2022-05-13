@@ -1,15 +1,17 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: sans-serif;
 }
 .root {
   background-color: lightblue;
   height: 100vh;
   overflow-y: scroll;
+  overflow-x: hidden;
   width: 100vw;
 }
-.inputAndSearch {
+.main {
   background-color: rgb(141, 141, 184);
   border-radius: 40px 40px 0px 0px;
   box-shadow: 10px 20px 40px grey;
@@ -18,23 +20,44 @@
   align-items: center;
   width: 50vw;
   height: 100vh;
-  margin: 20vh auto auto auto;
+  overflow-x: hidden;
+  margin: 20vh 20vw auto 20vw;
 }
-.inputAndSearch > form > label{
+.main > form > label{
   display: grid;
   grid-template-rows: auto;
 }
-.inputAndSearch > form > label > input{
+.main > form > label > input{
   outline: none;
   border-radius: 5px;
-  padding: 15px;
+  padding: 2vw;
   font-family: 'Roboto';
   font-size: large;
-
 }
-.inputAndSearch > form > label > button{
+.main > form > label > button{
   padding: 15px;
+  margin-top: 4px;
+  box-shadow: none;
+  border-color: none;
+  border-radius: 5px;
+  background-color: antiquewhite;
 }
 .heading {
   margin: 20px auto 4px auto;
+}
+.listItems{
+  margin-top: 20px;
+  align-self: auto;
+}
+.listItems > ol{
+  display: grid;
+  list-style-type: none;
+  gap: 4px;
+}
+.listItems > ol > li{
+  align-self: stretch;
+  border-radius: 5px;
+  padding: 15px 8px 15px 8px;
+  text-align: center;
+  border: 2px solid rgb(255, 255, 255);
 }
