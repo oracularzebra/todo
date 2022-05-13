@@ -67,25 +67,29 @@
 }
 .listItems > ol > li {
   position: relative;
+  width: 30vw;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border: 2px solid rgb(255, 255, 255);
+  background-color: rgb(179, 142, 213);
+  box-shadow: 1px 1px 1px grey;
   border-radius: 5px;
   margin-top: 10px;
 }
 .listItems > ol > li > div {
-  max-width: 100vw;  
-  max-height: 20vw;
-  align-self: stretch;
   display: flex;
+  justify-content: flex-start;
   padding: 15px 8px 15px 8px;
   cursor: default;
-  transition: ease-in .2s;
-
+  transition: padding ease-in 0.2s;
 }
-.listItems > ol > li > div:hover {
-  padding: 30px;
-  margin: 0px;
+.listItems > ol > li:hover > div {
+  padding-left: 50px;
+  overflow-x: hidden;
   max-width: fit-content;
+}
+#checkbox {
+  left: 0;
+  right: 0;
+  margin: auto;
+  float: inline-end;
+  position: absolute;
 }
