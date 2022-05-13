@@ -60,6 +60,7 @@
   align-self: auto;
 }
 .listItems > ol {
+  width: inherit;
   display: grid;
   justify-content: stretch;
   list-style-type: none;
@@ -67,8 +68,10 @@
 }
 .listItems > ol > li {
   position: relative;
-  width: 30vw;
   display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
   background-color: rgb(179, 142, 213);
   box-shadow: 1px 1px 1px grey;
   border-radius: 5px;
@@ -76,20 +79,22 @@
 }
 .listItems > ol > li > div {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   padding: 15px 8px 15px 8px;
   cursor: default;
+}
+#taskText ,#deleteButton{
+  position: relative;
+  float: left;
   transition: padding ease-in 0.2s;
 }
-.listItems > ol > li:hover > div {
-  padding-left: 50px;
-  overflow-x: hidden;
-  max-width: fit-content;
+.listItems > ol > li:hover  #taskText{
+  padding: 10px;
+  font-size: larger;
 }
-#checkbox {
-  left: 0;
-  right: 0;
-  margin: auto;
-  float: inline-end;
-  position: absolute;
+.listItems > ol > li:hover #deleteButton{
+  padding: 10px;
+}
+.listItems > ol > li:hover{
+  box-shadow: 4px 4px 40px grey;
 }
