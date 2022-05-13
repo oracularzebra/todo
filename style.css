@@ -12,7 +12,7 @@
   width: 100vw;
 }
 .main {
-  background-color: rgb(141, 141, 184);
+  background-color: rgb(208, 208, 228);
   border-radius: 40px 40px 0px 0px;
   box-shadow: 10px 20px 40px grey;
   display: flex;
@@ -26,6 +26,7 @@
 .main > form > label {
   display: grid;
   grid-template-rows: auto;
+  justify-content: center;
 }
 .main > form > label > input {
   outline: none;
@@ -55,14 +56,10 @@
 .heading {
   margin: 20px auto 4px auto;
 }
-.listItems {
-  margin-top: 20px;
-  align-self: auto;
-}
 .listItems > ol {
-  width: inherit;
   display: grid;
-  justify-content: stretch;
+  justify-content: center;
+  padding: 50px;
   list-style-type: none;
   grid-auto-flow: row;
 }
@@ -70,31 +67,52 @@
   position: relative;
   display: flex;
   flex-direction: row;
-  align-items: stretch;
   justify-content: space-between;
   background-color: rgb(179, 142, 213);
   box-shadow: 1px 1px 1px grey;
   border-radius: 5px;
   margin-top: 10px;
+  transition: 0.2s ease-in;
 }
 .listItems > ol > li > div {
   display: flex;
-  justify-content: space-between;
+  justify-content: stretch;
   padding: 15px 8px 15px 8px;
   cursor: default;
+  transition:padding .2s ease;
 }
-#taskText ,#deleteButton{
+#taskText {
   position: relative;
   float: left;
-  transition: padding ease-in 0.2s;
+  transition: font ease-in .2s;
 }
-.listItems > ol > li:hover  #taskText{
-  padding: 10px;
+#deleteButton {
+  align-self: stretch;
+  transition: background, padding ease-in 1s;
+  border:none;
+  outline:none;
+  border-radius: 5px;
+}
+.listItems > ol > li:hover #taskText {
   font-size: larger;
 }
-.listItems > ol > li:hover #deleteButton{
-  padding: 10px;
+.listItems > ol > li:hover > div {
+  padding: 20px;
 }
-.listItems > ol > li:hover{
+#deleteButton:hover {
+  background-color: red;
+}
+#checkbox {
+  align-self: center;
+  width: 20px;
+  height: 20px;
+  transition: scale 0.2s ease;
+}
+.listItems > ol > li:hover #checkbox{
+  scale: 2;
+}
+.listItems > ol > li:hover {
+  display: flex;
+  justify-content: space-between;
   box-shadow: 4px 4px 40px grey;
 }
