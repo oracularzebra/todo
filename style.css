@@ -97,6 +97,7 @@
 }
 #deleteButton {
   border: none;
+  scale: 0;
   outline: none;
   border-radius: 5px;
   transition: all 0.2s ease;
@@ -104,7 +105,10 @@
 .listItems > ol > li:hover #taskText {
   font-size: larger;
 }
-
+.listItems > ol > li:hover #deleteButton{
+  scale:1;
+  padding: 20px;
+}
 #deleteButton:hover {
   background-color: red;
 }
