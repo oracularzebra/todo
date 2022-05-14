@@ -117,7 +117,6 @@ checkboxes.forEach((checkbox) => {
 });
 
 deleteCheckedButton.addEventListener("click", (event) => {
-  //finding all the childs with items checked.
   taskArr = taskArr.filter((item) => !item.checked);
   localStorage.setItem("listItems", JSON.stringify(taskArr));
   window.location.reload();
