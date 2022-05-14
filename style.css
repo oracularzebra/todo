@@ -23,22 +23,28 @@
   overflow-x: hidden;
   margin: 20vh 20vw auto 20vw;
 }
-.main > form > label {
+.addAndRemoveForm > label {
   display: grid;
-  grid-template-rows: auto;
   justify-content: center;
+  grid-template-rows: auto;
+  gap: 5px;
+}
+.addAndRemoveForm {
+  display: flex;
 }
 .main > form > label > input {
   outline: none;
+  margin: auto;
+  align-self: stretch;
+  padding: 10px;
   border-radius: 5px;
-  padding: 1vw;
   width: 30vw;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: x-large;
 }
 .main > form > label > button {
-  padding: 15px;
-  margin-top: 4px;
+  padding: 1vw;
+  margin-top: auto;
   border: none;
   border-color: none;
   box-shadow: none;
@@ -48,7 +54,7 @@
   font-size: 1.5rem;
   background-color: rgb(242, 78, 78);
   box-shadow: inset 0 0 0 0 yellow;
-  transition: ease-out 1.6s;
+  transition: all ease-out 1.6s;
 }
 .main > form > label > button:hover {
   box-shadow: inset 100vw 0 0 0 rgb(21, 255, 0);
@@ -60,16 +66,11 @@
 .listItems > ol {
   display: grid;
   justify-content: center;
-  padding: 50px;
   list-style-type: none;
   grid-auto-flow: row;
 }
 .listItems > ol > li {
   display: flex;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
   margin: 10px auto;
   flex-direction: row;
   justify-content: space-between;
@@ -86,7 +87,7 @@
 #taskText {
   position: relative;
   float: left;
-  transition: all ease 1.2s;
+  transition: all ease 0.2s;
 }
 #deleteButton {
   border: none;
@@ -113,4 +114,23 @@
 .listItems > ol > li:hover {
   padding: 10px;
   box-shadow: 4px 4px 40px grey;
+}
+.removeAllAndRemoveSelectedButton {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: stretch;
+  gap: 5px;
+}
+#removeAll,
+#removeSelected {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 2vw;
+}
+#removeAll {
+  background-color: rgb(191, 36, 36);
+}
+#removeSelected {
+  background-color: rgb(146, 12, 12);
 }
