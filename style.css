@@ -90,7 +90,7 @@
   cursor: default;
 }
 #taskText {
-  position: relative;  console.log(taskArr);
+  position: relative;
   float: left;
   font-size: larger;
   transition: all ease 0.2s;
