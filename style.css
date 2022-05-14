@@ -145,3 +145,8 @@
 #removeSelected {
   background-color: rgb(146, 12, 12);
 }
+@media (max-width: 500px) {
+  .main{
+    width: 100vw;
+  }
+}
