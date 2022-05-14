@@ -31,9 +31,10 @@
 .main > form > label > input {
   outline: none;
   border-radius: 5px;
-  padding: 2vw;
-  font-family: "Roboto";
-  font-size: large;
+  padding: 1vw;
+  width: 30vw;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: x-large;
 }
 .main > form > label > button {
   padding: 15px;
@@ -64,41 +65,39 @@
   grid-auto-flow: row;
 }
 .listItems > ol > li {
-  position: relative;
   display: flex;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 10px auto;
   flex-direction: row;
   justify-content: space-between;
   background-color: rgb(179, 142, 213);
   box-shadow: 1px 1px 1px grey;
   border-radius: 5px;
-  margin-top: 10px;
-  transition: 0.2s ease-in;
+  transition: all 0.2s ease;
 }
 .listItems > ol > li > div {
   display: flex;
-  justify-content: stretch;
   padding: 15px 8px 15px 8px;
   cursor: default;
-  transition:padding .2s ease;
 }
 #taskText {
   position: relative;
   float: left;
-  transition: font ease-in .2s;
+  transition: all ease 1.2s;
 }
 #deleteButton {
-  align-self: stretch;
-  transition: background, padding ease-in 1s;
-  border:none;
-  outline:none;
+  border: none;
+  outline: none;
   border-radius: 5px;
+  transition: all 0.2s ease;
 }
 .listItems > ol > li:hover #taskText {
   font-size: larger;
 }
-.listItems > ol > li:hover > div {
-  padding: 20px;
-}
+
 #deleteButton:hover {
   background-color: red;
 }
@@ -106,13 +105,12 @@
   align-self: center;
   width: 20px;
   height: 20px;
-  transition: scale 0.2s ease;
+  transition: all 0.2s ease;
 }
-.listItems > ol > li:hover #checkbox{
+.listItems > ol > li:hover #checkbox {
   scale: 2;
 }
 .listItems > ol > li:hover {
-  display: flex;
-  justify-content: space-between;
+  padding: 10px;
   box-shadow: 4px 4px 40px grey;
 }
