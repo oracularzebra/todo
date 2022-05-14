@@ -148,5 +148,6 @@
 @media (max-width: 500px) {
   .main{
     width: 100vw;
+    border-radius: 20px;
   }
 }
