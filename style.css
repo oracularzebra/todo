@@ -92,7 +92,7 @@
 #taskText {
   position: relative;
   float: left;
-  font-size: larger;
+  font-size: large;
   transition: all ease 0.2s;
 }
 #deleteButton {
