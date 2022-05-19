@@ -5,51 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=, initial-scale=1.0" />
     <title>Todo</title>
-    <!-- <link rel="stylesheet" href="style.css" /> -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <div class="root">
-      <div class="main">
-        <div class="heading">
-          <h2>Todo App</h2>
-        </div>
-        <form class="addAndRemoveForm">
-          <label>
-            <input id="inputField" focus type="text" required />
-            <button type="submit">Add</button>
-          </label>
-        </form>
-        <div class="removeAllAndRemoveSelectedButton">
-          <button id="removeAll">Delete All</button>
-          <button id="removeSelected">Delete Selected</button>
-        </div>
-        <div class="listItems">
-          <ol>
-            <!-- <li>
-              <input type="checkbox" id="checkbox" />
-              <div>
-                <strong id="taskText">Go to the Church</strong>
-              </div>
-              <button id="deleteButton">Delete</button>
-            </li>
-            <li>
-              <input type="checkbox" id="checkbox" />
-              <div>
-                <strong id="taskText">Go to the school</strong>
-              </div>
-              <button id="deleteButton">Delete</button>
-            </li>
-            <li>
-              <input type="checkbox" id="checkbox" />
-              <div>
-                <strong id="taskText">Go to play</strong>
-              </div>
-              <button id="deleteButton">Delete</button>
-            </li> -->
-          </ol>
-        </div>
+  <body class="overflow-y-scroll bg-slate-500 h-screen w-screen">
+    <div
+      class="grid relative justify-center left-0 right-0 top-20 bottom-0 m-auto"
+    >
+      <div class="font-mono text-2xl text-center">
+        <h2>Todo App</h2>
       </div>
+      <form class="grid h-fit gap-2 m-0" id="addAndRemoveForm">
+        <input
+          class="p-2 m-1 rounded-sm text-lg"
+          id="inputField"
+          focus
+          type="text"
+          required
+        />
+        <button class="border-2 m-0 text-xl rounded-xl p-2 bg-green-600" type="submit">
+          Add
+        </button>
+      </form>
+      <div class="flex justify-around items-stretch">
+        <button class="text-md bg-red-600 rounded-md p-3 m-1" id="removeAll">
+          Delete All
+        </button>
+        <button class="text-md bg-red-400 rounded-md p-3 m-1" id="removeSelected">
+          Delete Selected
+        </button>
+      </div>
+      <ol class="grid gap-2">
+        <!-- <li class="flex justify-between bg-green-200 rounded-md p-3">
+          <input class="
+          w-[1.5em]
+          h-[1.5em]
+          border-4
+          border-green-500
+          rounded-[50%]
+          appearance-none
+          cursor-pointer
+          checked:bg-green-700
+          " type="checkbox" id="checkbox" />
+          <div>
+            <strong id="taskText">Go to the Church</strong>
+          </div>
+          <button id="deleteButton">&cross;</button>
+        </li> -->
+      </ol>
     </div>
     <script src="./main.js"></script>
   </body>

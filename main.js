@@ -1,5 +1,5 @@
 const textField = document.querySelector("#inputField");
-const form = document.querySelector(".addAndRemoveForm");
+const form = document.querySelector("#addAndRemoveForm");
 let list = document.querySelector("ol");
 const deleteCheckedButton = document.querySelector("#removeSelected");
 
@@ -18,6 +18,16 @@ const makeLiElement = ({ checked, value }) => {
   checkbox.type = "checkbox";
   checkbox.id = "checkbox";
   checkbox.checked = checked;
+  checkbox.className = `
+  w-[1.5em]
+  h-[1.5em]
+  border-4
+  border-green-500
+  rounded-[50%]
+  appearance-none
+  cursor-pointer
+  checked:bg-green-700
+  `
 
   const div = document.createElement("div");
 
@@ -33,6 +43,7 @@ const makeLiElement = ({ checked, value }) => {
   li.appendChild(checkbox);
   li.appendChild(div);
   li.append(deleteButton);
+  li.className ="flex justify-between bg-green-200 rounded-md p-3";
 
   return li;
 };
